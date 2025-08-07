@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { Calculator, Cpu, Zap, TrendingUp, Copy, Download } from 'lucide-react';
+import { Calculator, Cpu, Zap, TrendingUp } from 'lucide-react';
 import {
   Select,
   SelectContent,
@@ -10,7 +10,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { AI_MODELS, PROVIDER_NAMES, type AIModel } from '@/lib/models';
+import { AI_MODELS, PROVIDER_NAMES } from '@/lib/models';
 import { TokenCalculator } from '@/lib/tokenizers';
 import { formatNumber, formatCurrency, cn } from '@/lib/utils';
 
@@ -268,7 +268,7 @@ export default function HomePage() {
                 <h3 className="text-lg font-semibold text-white">Most Cost-Effective</h3>
               </div>
               <div className="space-y-3">
-                {topModels.map((model, index) => (
+                {topModels.map((model) => (
                   <div
                     key={model.id}
                     className="flex items-center justify-between p-3 bg-slate-800/30 rounded-lg cursor-pointer hover:bg-slate-700/30 transition-colors"
